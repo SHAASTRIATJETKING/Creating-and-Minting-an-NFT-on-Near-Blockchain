@@ -1,7 +1,8 @@
 # Creating-and-Minting-an-NFT-on-Near-Blockchain
 Demonstration of Creating and Minting an NFT on Near Blockchain
 
-
+# Statement of Purpose
+In this Near Demo Project, we are creating a testnet wallet account on Near Blockchain for creating and minting an NFT using a NFT minting Smart Contract written using Rust Programming Language.
 
 # Creating a Near Wallet in testnet on Near Blockchain
 
