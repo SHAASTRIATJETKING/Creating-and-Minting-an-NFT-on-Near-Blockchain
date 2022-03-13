@@ -144,10 +144,25 @@ The nft_mint arguments contains:
 
 Simply run "yarn && yarn build" to run a build script.
 
+This will compile our smart contract into a .wasm file (web assembly file) which will be appear in the out/main.wasm folder.
+
 build.sh file contains:
   
     #!/bin/bash
     set -e && RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release && mkdir -p ../out && cp target/wasm32-unknown-unknown/release/*.wasm ../out/main.wasm
+    
+# Important Note:
+
+If you are facing any problem or erros in running the script using yarn build command don't panic.
+
+Simply run the below command:
+
+    rustup target add wasm32-unknown-unknown 
+    
+Then again run the command yarn build now it wont give any error.
+
+
+      
 
 
     
