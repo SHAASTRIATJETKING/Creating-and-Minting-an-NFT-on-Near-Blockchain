@@ -124,6 +124,21 @@ The nft_mint arguments contains:
     
     --> Receiver_id: account that will own the NFT (string omitting special charaters).
     
+# Operations of Minting Function:
+
+  --> Measures intial storage being used on the smart contract.
+  
+  --> Specify the token struct that contains the owner ID.
+  
+  --> Checks for the existence of the token.
+  
+  --> Inserts the token id and the metadata.
+  
+  --> Calls an internal method that adds the token to the owner.
+  
+  --> Caluculates the required storage which was used.
+  
+  --> Refunds excess storage if the user attaches too much.
     
 
 
