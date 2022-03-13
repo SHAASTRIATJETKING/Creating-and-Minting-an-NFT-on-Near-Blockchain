@@ -139,6 +139,12 @@ The nft_mint arguments contains:
   --> Calculates the required storage which was used.
   
   --> Refunds excess storage if the user attaches too much.
+  
+# Deploying the Contract:
+
+Simply run "yarn && yarn build" to run a build script.
+
+
     
 
 
