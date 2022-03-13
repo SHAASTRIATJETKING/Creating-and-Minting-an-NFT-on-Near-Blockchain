@@ -221,6 +221,9 @@ To call the mint function we need to run the below command:
       
 Now check the collectibles tab of testnet wallet account which you created for viewing the NFT which you just minted using the smart contract.
 
+![image](https://user-images.githubusercontent.com/99475076/158053052-9bb15d11-7f69-4ab5-bfce-6974d925bb44.png)
+
+
 
     
 
