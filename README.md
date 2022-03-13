@@ -12,6 +12,16 @@ In this project,
   
   --> I am demonstrating how to mint the NFT which you created or purchased on Near Blockchain with the help of NFT Minting Smart Contract.
 
+# What does it mean to Minting an NFT on Near Blockchain?
+
+To mint an NFT a Smart Contract needs to able to:
+
+  --> Keeping track of Tokens.
+  
+  --> Storing information for each Token (i.e, NFT metadata).
+  
+  --> Linking a Token with an Onwer (In this the owner is neardemoproject.testnet).
+
 # Creating a Near Wallet in testnet on Near Blockchain
 
 Video Lecture on How to Create a Wallet in testnet on Near Blockchain 
