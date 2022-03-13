@@ -105,6 +105,16 @@ Go through the link for checking the ownership of NFT using the collectibles tab
     --> Descriptions: Description of an NFT
     
     --> Media: Link to information that the NFT contains (image,audio,video,gif).
+    
+# Minting Function contains:
+
+The minting function should do the following:
+
+     --> tokens_per_owner: Add the token ID into the set of tokens that the reciever owns.
+     
+     --> tokens_by_id: Create a token object, and map the token ID to that token object in the tokens_by_id field.
+     
+     --> token_metadata_by_id: Map the token ID to its metadata.
 
 
 
