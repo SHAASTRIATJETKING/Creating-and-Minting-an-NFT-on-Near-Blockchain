@@ -115,6 +115,16 @@ The minting function should do the following:
      --> tokens_by_id: Create a token object, and map the token ID to that token object in the tokens_by_id field.
      
      --> token_metadata_by_id: Map the token ID to its metadata.
+     
+The nft_mint arguments contains:
+
+    --> Token_id: Custom ID given to token (string).
+    
+    --> metadata: metadata associated with token (object).
+    
+    --> Receiver_id: account that will own the NFT (string omitting special charaters).
+    
+    
 
 
 
