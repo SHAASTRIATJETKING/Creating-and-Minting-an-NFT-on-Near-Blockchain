@@ -84,7 +84,27 @@ Go through the link for checking the ownership of NFT using the collectibles tab
     
     --> "new_default_meta" method: It intializes the contract metadata (i.e, the information about the contract itself).
     
-# 
+# Contract and Token Metadata - Contract:
+
+  NFT Contract Metadata - Information on the smart contract itself
+  
+  These are the required fields should be contain:
+  
+    --> Spec: version of smart contract
+    
+    --> Name: name of the smart contract
+    
+    --> Symbol: shorthand for name (USD, NEAR and, ETH).
+    
+ Token Metadata - Information that pertains to a specfic NFT
+ 
+ These are the required field should be contain:
+ 
+    --> Title: Name of an NFT
+    
+    --> Descriptions: Description of an NFT
+    
+    --> Media: Link to information that the NFT contains (image,audio,video,gif).
 
 
 
