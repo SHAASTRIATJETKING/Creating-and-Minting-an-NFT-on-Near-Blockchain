@@ -191,6 +191,12 @@ For intializing the smart contract, we need to run the below command:
 
     near call $NFT_CONTRACT_ID new_default_meta '{"owner_id": "'$NFT_CONTRACT_ID'"}' --accountId $NFT_CONTRACT_ID
     
+# Viewing the Contract's Metadata
+
+For viewing the Contract's Metadata we need to run the below command:
+
+    near view $NFT_CONTRACT_ID nft_metadata
+    
 
     
 
