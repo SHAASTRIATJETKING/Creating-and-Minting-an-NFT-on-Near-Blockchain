@@ -157,3 +157,10 @@ Simply run the below command:
     rustup target add wasm32-unknown-unknown 
 
 Then again run the command yarn build now it wont give any error.
+
+# Install near-cli
+
+     use the command for installing near-cli is:
+     npm install near-cli
+     
+
