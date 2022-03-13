@@ -73,6 +73,16 @@ Go through the link for checking the ownership of NFT using the collectibles tab
   --> Account_id: a string that ensures there are no special or unsupported.
   
   --> Tokenid: simply a string.
+  
+# Initialization Functions contains:
+
+  A function that can only be called one time. Typically upon deployment of a smart contract onto a near account.
+  
+    --> "new" method: It intializes all the contract fields defined.
+    
+    --> "new_default_meta" method: It intializes the contract metadata (i.e, the information about the contract itself).
+    
+# 
 
 
 
