@@ -136,7 +136,7 @@ The nft_mint arguments contains:
   
   --> Calls an internal method that adds the token to the owner.
   
-  --> Caluculates the required storage which was used.
+  --> Calculates the required storage which was used.
   
   --> Refunds excess storage if the user attaches too much.
     
