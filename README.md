@@ -197,6 +197,17 @@ For viewing the Contract's Metadata we need to run the below command:
 
     near view $NFT_CONTRACT_ID nft_metadata
     
+# Token Metadata
+
+The Token metadata contains the following:
+
+  --> token_id: "token-1"
+  --> metadata: 
+      --> title: "Jetking NFT Collection"
+      --> description: "This is the first NFT Minting on Near Blockchain"
+      --> media: "https://ipfs.io/ipfs/bafybeifk6lhlkoqpvu7josjpejfjtmr2x2nb3efrqhn3j4lbwdopwqoybe"
+      --> receiver_id: "'$NFT_CONTRACT_ID'"
+    
 
     
 
