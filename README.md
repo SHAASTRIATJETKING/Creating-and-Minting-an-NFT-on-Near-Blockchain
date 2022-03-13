@@ -177,6 +177,22 @@ Then again run the command yarn build now it wont give any error.
  
     Run the above command using git bash in VS Code not in PowerShell if you run in PowerShell it wont work.
     
+--> Next we need to echo our NFT_CONTRACT_ID using the below command:
+
+    echo $NFT_CONTRACT_ID
+    
+--> Next we need to deploy our Smart contract using the below command:
+
+    near deploy --wasmFile out/main.wasm --accountId $NFT_CONTRACT_ID
+    
+# Intializing the Smart Contract
+
+For intializing the smart contract, we need to run the below command:
+
+    near call $NFT_CONTRACT_ID new_default_meta '{"owner_id": "'$NFT_CONTRACT_ID'"}' --accountId $NFT_CONTRACT_ID
+    
+
+    
 
      
 
