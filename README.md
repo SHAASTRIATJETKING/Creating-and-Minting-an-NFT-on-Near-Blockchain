@@ -41,7 +41,7 @@ Purchase an NFT of your wish from https://demo.uniqart.io/ by connecting your te
 
 Go through the link for checking the ownership of an NFT you purchased using your testnet account.
 
-https://demo.uniqart.io/token/9482:1
+https://demo.uniqart.io/token/9435:1
 
 ![image](https://user-images.githubusercontent.com/99475076/158045541-cce4d481-4789-443d-8901-c91dd167f7ab.png)
 
