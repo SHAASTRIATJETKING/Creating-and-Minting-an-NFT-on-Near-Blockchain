@@ -64,15 +64,17 @@ Go through the link for checking the ownership of NFT using the collectibles tab
 
 # Contract Struct contains:
 
-  --> tokens_per_owner: Allows you to keep track of the tokens owned by any account.
+  The Smart Contract Struct having the following fields:
+
+    --> tokens_per_owner: Allows you to keep track of the tokens owned by any account.
   
-  --> token_by_id: returns all the information about a specific token.
+    --> token_by_id: returns all the information about a specific token.
   
-  --> Token_metadata_by_id: returns just the metadata for a specific token.
+    --> Token_metadata_by_id: returns just the metadata for a specific token.
   
-  --> Account_id: a string that ensures there are no special or unsupported.
+    --> Account_id: a string that ensures there are no special or unsupported.
   
-  --> Tokenid: simply a string.
+    --> Tokenid: simply a string.
   
 # Initialization Functions contains:
 
