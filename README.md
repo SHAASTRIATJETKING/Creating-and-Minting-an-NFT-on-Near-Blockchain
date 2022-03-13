@@ -223,6 +223,8 @@ Now check the collectibles tab of testnet wallet account which you created for v
 
 ![image](https://user-images.githubusercontent.com/99475076/158053052-9bb15d11-7f69-4ab5-bfce-6974d925bb44.png)
 
+https://explorer.testnet.near.org/transactions/HjpV6PP2EW41j7EFnG2jyb91iT1cKxVvJh4NmNdLoATx
+
 
 
     
