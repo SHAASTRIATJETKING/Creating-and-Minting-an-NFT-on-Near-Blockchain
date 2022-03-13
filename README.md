@@ -218,6 +218,10 @@ The Token metadata contains the following:
 To call the mint function we need to run the below command:
 
       near call $NFT_CONTRACT_ID nft_mint '{"token_id": "token-1", "metadata": {"title": "Jetking NFT Collection","description":"This is the first NFT Minting on Near Blockchain :)","media": "https://ipfs.io/ipfs/bafybeifk6lhlkoqpvu7josjpejfjtmr2x2nb3efrqhn3j4lbwdopwqoybe"}, "receiver_id":"'$NFT_CONTRACT_ID'"}' --accountId $NFT_CONTRACT_ID --amount 0.1
+      
+Now check the collectibles tab of testnet wallet account which you created for viewing the NFT which you just minted using the smart contract.
+
+
     
 
     
