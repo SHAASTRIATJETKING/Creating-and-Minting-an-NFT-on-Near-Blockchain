@@ -1,173 +1,142 @@
-# Creating-and-Minting-an-NFT-on-Near-Blockchain
-Demonstration of Creating and Minting an NFT on Near Blockchain
+# NEAR NFT-Tutorial
 
-# Statement of Purpose
-In this Near Demo Project, we are creating a testnet wallet account on Near Blockchain for creating and minting an NFT using a NFT minting Smart Contract written using Rust Programming Language. 
+Welcome to NEAR's NFT tutorial, where we will help you parse the details around NEAR's [NEP-171 standard](https://nomicon.io/Standards/NonFungibleToken/Core.html) (Non-Fungible Token Standard), and show you how to build your own NFT smart contract from the ground up, improving your understanding about the NFT standard along the way. 
 
-In this project, 
+## Prerequisites
 
-  --> I am demonstrating how to create a testnet wallet account on Near Blockchain.
-  
-  --> I am demonstrating how to create an account on https://demo.uniqart.io/ for creating or purchasing an NFT using 200 Near tokens which we receive when we create a testnet account.
-  
-  --> I am demonstrating how to mint the NFT which you created or purchased on Near Blockchain with the help of NFT Minting Smart Contract.
+* [NEAR Wallet Account](wallet.testnet.near.org)
+* [Rust Toolchain](https://docs.near.org/docs/develop/contracts/rust/intro#installing-the-rust-toolchain)
+* [NEAR-CLI](https://docs.near.org/docs/tools/near-cli#setup)
+* [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
-# What does it mean to Minting an NFT on Near Blockchain?
+## Tutorial Stages 
 
-To mint an NFT a Smart Contract needs to able to:
-
-  --> Keeping track of Tokens.
-  
-  --> Storing information for each Token (i.e, NFT metadata).
-  
-  --> Linking a Token with an Onwer (In this the owner is neardemoproject.testnet).
-
-# Creating a Near Wallet in testnet on Near Blockchain
-
-Video Lecture on How to Create a Wallet in testnet on Near Blockchain 
-
-https://drive.google.com/file/d/1prIotJ2W3I6HrrNkVKz-lhEh4oKMr8Ql/view?usp=sharing
-
-PDF Documentation on How to Create a Wallet in testnet on Near Blockchain
-
-https://drive.google.com/file/d/1ABF5cK2cVlDUF0_t4kS9ynmwWVDDLkAG/view?usp=sharing
-
-Near Wallet in testnet created with account name : neardemoproject.testnet
-
-# Connecting your testnet account which you created on https://demo.uniqart.io/
-
-This is an NFT Market place where you can create and purchase NFTs of your wish using 200 Near tokens which you received in the testnet account which you created previously.
-
-Purchase an NFT of your wish from https://demo.uniqart.io/ by connecting your testnet wallet account.
-
-Go through the link for checking the ownership of an NFT you purchased using your testnet account.
-
-https://demo.uniqart.io/token/9482:1
-
-![image](https://user-images.githubusercontent.com/99475076/158045541-cce4d481-4789-443d-8901-c91dd167f7ab.png)
-
-Go through the link for checking the ownership of NFT using the collectibles tab on https://wallet.testnet.near.org/?tab=collectibles 
-
-![image](https://user-images.githubusercontent.com/99475076/158044743-9763121b-b740-4f71-9881-4a05d52cab30.png)
-
-# The Tools you need to implement Smart Contract
-
-  --> Yarn (Package Manager)
-  
-  --> Near-api-js (JavaScript library that utilizes the RPC to interact with NEAR Blockchain)
-  
-  --> Near-cli (cli tool that acts as a wrapper around near-api-js to interact with the NEAR Blockchain).
-  
-  --> NEAR testnet wallet account (using wallet.testnet.org)
-  
-  --> IDE such as Visual Studio Code.
-
-# Contract Struct contains:
-
-  The Smart Contract Struct having the following fields:
-
-    --> tokens_per_owner: Allows you to keep track of the tokens owned by any account.
-  
-    --> token_by_id: returns all the information about a specific token.
-  
-    --> Token_metadata_by_id: returns just the metadata for a specific token.
-  
-    --> Account_id: a string that ensures there are no special or unsupported.
-  
-    --> Tokenid: simply a string.
-  
-# Initialization Functions contains:
-
-  A function that can only be called one time. Typically upon deployment of a smart contract onto a near account.
-  
-    --> "new" method: It intializes all the contract fields defined.
-    
-    --> "new_default_meta" method: It intializes the contract metadata (i.e, the information about the contract itself).
-    
-# Contract and Token Metadata - Contract:
-
-  NFT Contract Metadata - Information on the smart contract itself
-  
-  These are the required fields should be contain:
-  
-    --> Spec: version of smart contract
-    
-    --> Name: name of the smart contract
-    
-    --> Symbol: shorthand for name (USD, NEAR and, ETH).
-    
- Token Metadata - Information that pertains to a specfic NFT
- 
- These are the required field should be contain:
- 
-    --> Title: Name of an NFT
-    
-    --> Descriptions: Description of an NFT
-    
-    --> Media: Link to information that the NFT contains (image,audio,video,gif).
-    
-# Minting Function contains:
-
-The minting function should do the following:
-
-     --> tokens_per_owner: Add the token ID into the set of tokens that the reciever owns.
-     
-     --> tokens_by_id: Create a token object, and map the token ID to that token object in the tokens_by_id field.
-     
-     --> token_metadata_by_id: Map the token ID to its metadata.
-     
-The nft_mint arguments contains:
-
-    --> Token_id: Custom ID given to token (string).
-    
-    --> metadata: metadata associated with token (object).
-    
-    --> Receiver_id: account that will own the NFT (string omitting special charaters).
-    
-# Operations of Minting Function:
-
-  --> Measures intial storage being used on the smart contract.
-  
-  --> Specify the token struct that contains the owner ID.
-  
-  --> Checks for the existence of the token.
-  
-  --> Inserts the token id and the metadata.
-  
-  --> Calls an internal method that adds the token to the owner.
-  
-  --> Calculates the required storage which was used.
-  
-  --> Refunds excess storage if the user attaches too much.
-  
-# Deploying the Contract:
-
-Simply run "yarn && yarn build" to run a build script.
-
-This will compile our smart contract into a .wasm file (web assembly file) which will be appear in the out/main.wasm folder.
-
-build.sh file contains:
-  
-    #!/bin/bash
-    set -e && RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release && mkdir -p ../out && cp target/wasm32-unknown-unknown/release/*.wasm ../out/main.wasm
-    
-# Important Note:
-
-If you are facing any problem or erros in running the script using yarn build command don't panic.
-
-Simply run the below command:
-
-    rustup target add wasm32-unknown-unknown 
-    
-Then again run the command yarn build now it wont give any error.
+Each branch you will find in this repo corresponds to various stages of this tutorial with a partially completed contract at each stage. You are welcome to start from any stage you want to learn the most about. 
 
 
 
+| Branch        | Docs Tutorial                                                                                    | Description |
+| ------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| 1.skeleton    | [Contract Architecture](https://docs.near.org/docs/tutorials/contracts/nfts/skeleton) | You'll learn the basic architecture of the NFT smart contract, and you'll compile this skeleton code with the Rust toolchain.            |
+| 2.minting     | [Minting](https://docs.near.org/docs/tutorials/contracts/nfts/minting)                |Here you'll flesh out the skeleton so the smart contract can mint a non-fungible token             |
+| 3.enumeration | [Enumeration](https://docs.near.org/docs/tutorials/contracts/nfts/enumeration)        |    Here you'll find different enumeration methods that can be used to return the smart contract's states.          |
+| 4.core        | [Core](https://docs.near.org/docs/tutorials/contracts/nfts/core)                      | In this tutorial you'll extend the NFT contract using the core standard, which will allow you to transfer non-fungible tokens.             |
+| 5.approval    | [Approval](https://docs.near.org/docs/tutorials/contracts/nfts/approvals)             | Here you'll expand the contract allowing other accounts to transfer NFTs on your behalf.            |
+| 6.royalty     | [Royalty](https://docs.near.org/docs/tutorials/contracts/nfts/royalty)                                                                                        |Here you'll add the ability for non-fungible tokens to have royalties. This will allow people to get a percentage of the purchase price when an NFT is purchased.             |
+| 7.events      | -----------                                                                                        |   This allows indexers to know what functions are being called and make it easier and more reliable to keep track of information that can be used to populate the collectibles tab in the wallet for example. (tutorial docs have yet to be implemented )          |
+| 8.marketplace | -----------                                                                                      | -----------             |
 
-      
+
+The tutorial series also contains a very helpful section on [**Upgrading Smart Contracts**](https://docs.near.org/docs/tutorials/contracts/nfts/upgrade-contract). Definitely go and check it out as this is a common pain point.
+
+# Quick-Start 
+
+If you want to see the full completed contract go ahead and clone and build this repo using 
+
+```=bash
+git clone https://github.com/near-examples/nft-tutorial.git 
+cd nft-tutorial
+git switch 6.royalty
+yarn build
+```
+
+Now that you've cloned and built the contract we can try a few things. 
+
+## Mint An NFT
+
+Once you've created your near wallet go ahead and login to your wallet with your cli and follow the on-screen prompts
+
+```=bash
+near login
+```
+
+Once your logged in you have to deploy the contract. Make a subaccount with the name of your choosing 
+
+```=bash 
+near create-account nft-example.your-account.testnet --masterAccount your-account.testnet --initialBalance 10
+```
+
+After you've created your sub account deploy the contract to that sub account, set this variable to your sub account name
+
+```=bash
+NFT_CONTRACT_ID=nft-example.your-account.testnet
+
+MAIN_ACCOUNT=your-account.testnet
+```
+
+Verify your new variable has the correct value
+```=bash
+echo $NFT_CONTRACT_ID
+
+echo $MAIN_ACCOUNT
+```
 
 
-    
+### Deploy Your Contract
+```=bash
+near deploy --accountId $NFT_CONTRACT_ID --wasmFile out/main.wasm
+```
+
+### Initialize Your Contract 
+
+```=bash
+near call $NFT_CONTRACT_ID new_default_meta '{"owner_id": "'$NFT_CONTRACT_ID'"}' --accountId $NFT_CONTRACT_ID
+```
+
+### View Contracts Meta Data
+
+```=bash
+near view $NFT_CONTRACT_ID nft_metadata
+```
+### Minting Token
+
+```bash=
+near call $NFT_CONTRACT_ID nft_mint '{"token_id": "token-1", "metadata": {"title": "My Non Fungible Team Token", "description": "The Team Most Certainly Goes :)", "media": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"}, "receiver_id": "'$MAIN_ACCOUNT'"}' --accountId $MAIN_ACCOUNT --amount 0.1
+```
+
+After you've minted the token go to wallet.testnet.near.org to `your-account.testnet` and look in the collections tab and check out your new sample NFT! 
 
 
 
+## View NFT Information
+
+After you've minted your NFT you can make a view call to get a response containing the `token_id` `owner_id` and the `metadata`
+
+```bash=
+near view $NFT_CONTRACT_ID nft_token '{"token_id": "token-1"}'
+```
+
+## Transfering NFTs
+
+To transfer an NFT go ahead and make another [testnet wallet account](https://wallet.testnet.near.org).
+
+Then run the following
+```bash=
+MAIN_ACCOUNT_2=your-second-wallet-account.testnet
+```
+
+Verify the correct variable names with this
+
+```=bash
+echo $NFT_CONTRACT_ID
+
+echo $MAIN_ACCOUNT
+
+echo $MAIN_ACCOUNT_2
+```
+
+To initiate the transfer..
+
+```bash=
+near call $NFT_CONTRACT_ID nft_transfer '{"receiver_id": "$MAIN_ACCOUNT_2", "token_id": "token-1", "memo": "Go Team :)"}' --accountId $MAIN_ACCOUNT --depositYocto 1
+```
+
+In this call you are depositing 1 yoctoNEAR for security and so that the user will be redirected to the NEAR wallet.
+
+## Errata
+
+Large Changes:
+* **2022-02-12**: updated the enumeration methods `nft_tokens` and `nft_tokens_for_owner` to no longer use any `to_vector` operations to save GAS. In addition, the default limit was changed from 0 to 50. PR found [here](https://github.com/near-examples/nft-tutorial/pull/17). 
+
+Small Changes:
+* **2022-02-22**: changed `token_id` parameter type in nft_payout from `String` to `TokenId` for consistency as per pythonicode's suggestion
