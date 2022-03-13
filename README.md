@@ -163,4 +163,20 @@ Then again run the command yarn build now it wont give any error.
      use the command for installing near-cli is:
      npm install near-cli
      
+# Deploying the Contract:
+
+--> First we need to run "near login" for storing the keys onto your local machine with near-cli.
+    
+    near login
+
+--> Next we need to export our NFT Contract using the below command,
+
+    export NFT_CONTRACT_ID="your_account_name" [like neardemoproject.testnet].
+    
+ Important note is:
+ 
+    Run the above command using git bash in VS Code not in PowerShell if you run in PowerShell it wont work.
+    
+
+     
 
