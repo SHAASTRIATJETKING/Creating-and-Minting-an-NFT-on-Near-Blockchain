@@ -2,7 +2,15 @@
 Demonstration of Creating and Minting an NFT on Near Blockchain
 
 # Statement of Purpose
-In this Near Demo Project, we are creating a testnet wallet account on Near Blockchain for creating and minting an NFT using a NFT minting Smart Contract written using Rust Programming Language.
+In this Near Demo Project, we are creating a testnet wallet account on Near Blockchain for creating and minting an NFT using a NFT minting Smart Contract written using Rust Programming Language. 
+
+In this project, 
+
+  --> I am demonstrating how to create a testnet wallet account on Near Blockchain.
+  
+  --> I am demonstrating how to create an account on https://demo.uniqart.io/ for creating or purchasing an NFT using 200 Near tokens which we receive when we create a testnet account.
+  
+  --> I am demonstrating how to mint the NFT which you created or purchased on Near Blockchain with the help of NFT Minting Smart Contract.
 
 # Creating a Near Wallet in testnet on Near Blockchain
 
