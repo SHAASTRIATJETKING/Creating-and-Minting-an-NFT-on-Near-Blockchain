@@ -1,6 +1,8 @@
 # Creating-and-Minting-an-NFT-on-Near-Blockchain
 Demonstration of Creating and Minting an NFT on Near Blockchain
 
+
+
 # Creating a Near Wallet in testnet on Near Blockchain
 
 Video Lecture on How to Create a Wallet in testnet on Near Blockchain 
@@ -24,6 +26,18 @@ Go through the link for checking the ownership of an NFT you purchased using you
 https://demo.uniqart.io/token/9482:1
 
 ![image](https://user-images.githubusercontent.com/99475076/158044743-9763121b-b740-4f71-9881-4a05d52cab30.png)
+
+# The Tools you need to implement
+
+  --> Yarn (Package Manager)
+  
+  --> Near-api-js (JavaScript library that utilizes the RPC to interact with NEAR Blockchain)
+  
+  --> Near-cli (cli tool that acts as a wrapper around near-api-js to interact with the NEAR Blockchain).
+  
+  --> NEAR testnet wallet account (using wallet.testnet.org)
+  
+  --> IDE such as Visual Studio Code.
 
 
 
