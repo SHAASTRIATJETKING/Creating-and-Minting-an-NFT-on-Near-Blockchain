@@ -144,6 +144,11 @@ The nft_mint arguments contains:
 
 Simply run "yarn && yarn build" to run a build script.
 
+build.sh file contains:
+  
+    #!/bin/bash
+    set -e && RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release && mkdir -p ../out && cp target/wasm32-unknown-unknown/release/*.wasm ../out/main.wasm
+
 
     
 
