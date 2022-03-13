@@ -50,7 +50,7 @@ Go through the link for checking the ownership of NFT using the collectibles tab
 
 ![image](https://user-images.githubusercontent.com/99475076/158044743-9763121b-b740-4f71-9881-4a05d52cab30.png)
 
-# The Tools you need to implement
+# The Tools you need to implement Smart Contract
 
   --> Yarn (Package Manager)
   
